@@ -1,0 +1,42 @@
+{
+  "name": "archway",
+  "version": "0.0.1",
+  "description": "",
+  "license": "ISC",
+  "author": "Archway Inc.",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:server && npm run build:client && npm run build:cef",
+    "build:server": "node esbuild.config.js server",
+    "build:client": "node esbuild.config.js client",
+    "build:cef": "vite build",
+    "dev:cef": "vite",
+    "lint": "eslint './**/*.{ts,vue}'",
+    "lint:fix": "eslint './**/*.{ts,vue}' --fix",
+    "format": "prettier --write './**/*.{ts,vue,css,scss,js,json,md}'",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@ragempcommunity/types-cef": "^2.1.9",
+    "@ragempcommunity/types-client": "^2.1.9",
+    "@ragempcommunity/types-server": "^2.1.9",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "esbuild": "^0.27.4",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.8.0",
+    "prettier": "^3.8.1",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.3",
+    "vue": "^3.5.31",
+    "vue-eslint-parser": "^10.4.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  }
+}
