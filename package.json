@@ -1,0 +1,16 @@
+{
+  "name": "archway",
+  "private": true,
+  "workspaces": [
+    "sources/browser",
+    "sources/client",
+    "sources/server",
+    "sources/shared"
+  ],
+  "scripts": {
+    "build": "pnpm -r run build",
+    "start": "pnpm --filter ./sources/server run start"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}
