@@ -4,9 +4,8 @@
   "description": "",
   "license": "ISC",
   "author": "Archway Inc.",
-  "type": "module",
   "scripts": {
-    "start": "pnpm install && pnpm run build && cd dist && npx ragemp-pkg release",
+    "start": "pnpm install && pnpm run build && cd dist && npx ragemp-pkg release && ragemp-server.exe",
     "build": "pnpm run build:server && pnpm run build:client && pnpm run build:browser --emptyOutDir",
     "build:server": "node esbuild.config.js server",
     "build:client": "node esbuild.config.js client",
