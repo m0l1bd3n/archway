@@ -9,7 +9,7 @@ export default defineConfig({
   root: resolve('./browser'),
   resolve: {
     alias: {
-      '@': resolve('./browser'),
+      '@browser': resolve('./browser'),
       '@assets': resolve('./browser/assets'),
       '@components': resolve('./browser/components'),
       '@views': resolve('./browser/views'),
