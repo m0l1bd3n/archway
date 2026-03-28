@@ -1,17 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "types": [
-      "@ragempcommunity/types-client",
-      "@ragempcommunity/types-server",
-      "@ragempcommunity/types-cef"
-    ]
+    "skipLibCheck": true
   },
   "include": ["./"]
 }

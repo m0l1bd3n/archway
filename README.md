@@ -38,7 +38,7 @@ This repository contains the source code and configuration for a project based o
 
 ## Requirements
 
-- Node.js >= 18
+- Node.js 14+
 - pnpm
 - RAGE Multiplayer server (ragemp-server.exe in project root)
 
