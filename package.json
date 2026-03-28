@@ -8,9 +8,10 @@
     "sources/shared"
   ],
   "scripts": {
-    "build": "pnpm -r run build",
-    "start": "pnpm --filter ./sources/server run start"
+    "start": "npx ragemp-pkg release && cd sources && pnpm i && pnpm run build && cd .. && ragemp-server.exe"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ragemp-pkg": "^1.0.1"
+  },
   "license": "MIT"
 }

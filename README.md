@@ -1,53 +1,47 @@
 # RAGE Project
 
-## Описание
+## Description
 
-Этот репозиторий содержит исходный код и конфигурацию для проекта на платформе RAGE Multiplayer. В проекте реализованы серверная, клиентская и браузерная части, а также поддержка CEF и .NET компонентов.
+This repository contains the source code and configuration for a project based on the RAGE Multiplayer platform. The project includes server, client, and browser parts, as well as support for CEF and .NET components.
 
-## Структура проекта
+## Project Structure
 
-- `bin/` — скрипты и бинарные файлы
-- `client_packages/` — клиентские скрипты и ресурсы CEF
-- `dotnet/` — .NET зависимости и локализации
-- `maps/` — карты
-- `packages/` — дополнительные пакеты
-- `server/` — серверные скрипты (Node.js)
-- `plugins/` — плагины
-- `sources/` — исходные TypeScript/JS/Vue файлы
-    - `browser/` — фронтенд (Vue)
-    - `client/` — клиентская логика
-    - `server/` — серверная логика
-    - `shared/` — общие константы и типы
-- `conf.json` — основной конфиг
-- `.env` — переменные окружения (не коммитить)
+- `sources/` — TypeScript/JS/Vue source files
+    - `browser/` — frontend (Vue)
+    - `client/` — client logic
+    - `server/` — server logic
+    - `shared/` — shared constants and types
+- `conf.json` — main config
+- `.env` — environment variables (do not commit)
 
-## Быстрый старт
+## Quick Start
 
-1. Установите зависимости:
-   ```sh
-   pnpm install
-   ```
-2. Создайте файл `.env` в корне и заполните нужные переменные.
-3. Соберите проект:
-   ```sh
-   pnpm build
-   ```
-4. Запустите сервер:
-   ```sh
-   pnpm start
-   ```
+1. Copy `.env.example` to `.env` and update the values as needed for your environment.
+2. Start the server (this will install dependencies, build the sources, and launch the RAGE MP server):
+    ```sh
+    pnpm start
+    ```
 
-## Скрипты
 
-- `pnpm build` — сборка проекта
-- `pnpm start` — запуск сервера
+## Scripts
 
-## Требования
+- `pnpm start` — Build the project and start the RAGE MP server
+- `pnpm build` — Build server, client, and browser sources
+- `pnpm build:server` — Build only the server sources
+- `pnpm build:client` — Build only the client sources
+- `pnpm build:browser` — Build only the browser (Vue) sources
+- `pnpm dev:browser` — Start the browser (Vue) in development mode with hot reload
+- `pnpm lint` — Run ESLint to check code style and find problems
+- `pnpm lint:fix` — Run ESLint and automatically fix fixable issues
+- `pnpm format` — Format all source files using Prettier
+- `pnpm typecheck` — Run TypeScript type checking
+
+## Requirements
 
 - Node.js >= 18
 - pnpm
-- RAGE Multiplayer server
+- RAGE Multiplayer server (ragemp-server.exe in project root)
 
-## Лицензия
+## License
 
 MIT
