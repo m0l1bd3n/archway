@@ -7,8 +7,8 @@
   "scripts": {
     "start": "pnpm install && pnpm run build && cd dist && npx ragemp-pkg release && ragemp-server.exe",
     "build": "pnpm run build:server && pnpm run build:client && pnpm run build:browser --emptyOutDir",
-    "build:server": "node esbuild.config.js server",
-    "build:client": "node esbuild.config.js client",
+    "build:server": "node esbuild.config.mjs server",
+    "build:client": "node esbuild.config.mjs client",
     "build:browser": "vite build --emptyOutDir",
     "dev:browser": "vite",
     "lint": "eslint './**/*.{ts,vue}'",
@@ -22,6 +22,7 @@
     "@ragempcommunity/types-server": "^2.1.9",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^25.5.0",
+    "@types/pg": "^8.20.0",
     "@typescript-eslint/eslint-plugin": "^8.57.2",
     "@typescript-eslint/parser": "^8.57.2",
     "@vitejs/plugin-vue": "^6.0.5",
@@ -37,6 +38,8 @@
     "vue-eslint-parser": "^10.4.0"
   },
   "dependencies": {
-    "dotenv": "^17.3.1"
+    "dotenv": "^17.3.1",
+    "kysely": "^0.28.14",
+    "pg": "^8.20.0"
   }
 }
